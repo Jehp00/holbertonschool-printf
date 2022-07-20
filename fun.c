@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * print_c - prints char format
+ * @c: character
+ * Return: return value to counter
+ */
 int print_c(va_list c)
 {
 	char c_h;
@@ -9,6 +14,12 @@ int print_c(va_list c)
 	_putchar(c_h);
 	return (1);
 }
+
+/**
+ * print_s - prints string format
+ * @s: string
+ * Return: return value to counter
+ */
 
 int print_s(va_list s)
 {
@@ -24,8 +35,14 @@ int print_s(va_list s)
 	return (j);
 }
 
-int print_%(va_list %)
+/**
+ * print_ % - prints '%'
+ * @%: percentage
+ * Return: return value to counter
+ */
+
+int print_ % (va_list %)
 {
-	putchar ('%');
+	_putchar ('%');
 	return (1);
 }
