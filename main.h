@@ -10,6 +10,7 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_c(va_list c);
 int print_s(va_list s);
+static int(*check_specifiers(const char *format)(va_list);
 
 /*Structures*/
 
