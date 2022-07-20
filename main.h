@@ -13,6 +13,11 @@ int print_s(va_list s);
 
 /*Structures*/
 
+/**
+ * struct print - structure for print the specifiers
+ * @a: type of print
+ * @f: function
+ */
 
 typedef struct print
 {
