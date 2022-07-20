@@ -10,7 +10,8 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_c(va_list c);
 int print_s(va_list s);
-static int(*check_specifiers(const char *format)(va_list);
+int print_ % (va_list %);
+static int(*check_specifiers(const char *format))(va_list);
 
 /*Structures*/
 
@@ -23,7 +24,7 @@ static int(*check_specifiers(const char *format)(va_list);
 typedef struct print
 {
 	char *a;
-	int(*f)(va_list);
+	int (*f)(va_list);
 } print_t;
 
 #endif /*MAIN:H*/
