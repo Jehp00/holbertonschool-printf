@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 
 /**
  * check_specifiers - checks if there is a valid format specifier
@@ -8,24 +8,24 @@
  *
  * Return: pointer to valid function or NULL
  */
-static int (*check_specifiers(const char *format))(va_list)
+int (*check_specifiers(const char *format))(va_list)
 {
 	unsigned int a;
 	print_t ar[] = {
 	{"c", print_c},
 	{"s", print_s},
-	{"%", print_ % },
+	/*{"%", print_ % },*/
 	{NULL, NULL}
 	};
 
-	for (a = 0; ar[a].t != NULL; a++)
+	for (a = 0; ar[a].a != NULL; a++)
 	{
-		if (*(ar[a].t) == *format)
+		if (*(ar[a].a) == *format)
 		{
 			break;
 		}
 	}
-	return (p[a].f);
+	return (ar[a].f);
 }
 
 /**
