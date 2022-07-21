@@ -36,17 +36,3 @@ int print_s(va_list s)
 	}
 	return (j);
 }
-
-
-/**
- * print_ % - prints '%'
- * @%: percentage
- * Return: return value to counter
- */
-/*
-int print_ % (va_list %)
-{
-	_putchar ('%');
-	return (1);
-}
-*/
