@@ -29,7 +29,7 @@ int print_s(va_list s)
 
 	po = va_arg(s, char *);
 	if (po == NULL)
-		po = "(nil)";
+		po = "(null)";
 	for (j = 0; po[j] != '\0'; j++)
 	{
 		_putchar(po[j]);
