@@ -8,25 +8,29 @@
  */
 int print_o(va_list o)
 {
-	unsigned int n = va_arg(o, int), q = 0, w;
-	int quot;
-	int octaln[100];
 
-	quot = n;
-	if (quot < 9)
+	unsigned int num, a = 0, i = 0;
+	int tab[100];
+
+	num = va_arg(o, int);
+	if (num < 9)
 	{
-		_putchar(quot + '0');
-		return(1);
+		putchar(num + '0');
+		a = 1;
 	}
-	while (quot > 0)
+	else if (num >= 9)
 	{
-		octaln[q] = quot % 8;
-		quot = quot / 8;
-		q++;
+		while (num > 0)
+		{
+			tab[i] = num % 8;
+			num /= 8;
+			i++;
+		}
 	}
-	for (w = q; w > 0; w--)
+	while (i--)
 	{
-		_putchar((octaln[w]) + '0');
+		putchar(tab[i] + '0');
+		a++;
 	}
-	return(q);
+	return (a);
 }
