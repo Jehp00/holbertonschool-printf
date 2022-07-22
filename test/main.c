@@ -15,9 +15,11 @@ int main(void)
     void *addr;
     long int l = UINT_MAX;
 
+    printf("%o\n", l);
+    printf("%o\n", l);
     l += 1024;
-    len = _printf("%o\n", 0);
-    len2 = printf("%o\n", 0);
+    len = _printf("%o\n", l);
+    len2 = printf("%o\n", l);
     _printf("Length:[%d, %d]\n", len2, len);
     printf("Length:[%d, %d]\n", len2, len);
     len = _printf("Let's try to printf a simple sentence.\n");

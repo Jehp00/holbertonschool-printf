@@ -6,11 +6,12 @@
  *
  * Return: Number of ints printed
  */
+
 int print_o(va_list o)
 {
 	long int n = va_arg((o), long int), q = 1, w;
 	long int quot;
-	int octaln[100];
+	long int octaln[100];
 
 	quot = n;
 	if (quot == 0)
