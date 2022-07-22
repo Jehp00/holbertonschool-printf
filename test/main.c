@@ -15,6 +15,9 @@ int main(void)
     void *addr;
     long int l = UINT_MAX;
 
+    _printf("%S\n", "Best\nSchool");
+    printf("%S\n", "Best\nSchool");
+    printf("%S\n", "Best\tSchool");
     printf("%o\n", l);
     printf("%o\n", l);
     l += 1024;
