@@ -13,7 +13,7 @@ int print_o(va_list o)
 	int octaln[100];
 
 	quot = n;
-	if (quot = 0)
+	if (quot == 0)
 	{
 		_putchar('0');
 		_putchar('0');
