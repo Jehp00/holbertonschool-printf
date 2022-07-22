@@ -6,31 +6,27 @@
  *
  * Return: Number of ints printed
  */
+
 int print_o(va_list o)
 {
+	long int n = va_arg((o), long int), q = 1, w;
+	long int quot;
+	int octaln[100];
 
-	long int num, a = 0, i = 0;
-	long int tab[100];
-
-	num = va_arg(o, long int);
-	if (num < 9)
+	quot = n;
+	if (quot == 0)
 	{
-		putchar(num + '0');
-		a = 1;
+		_putchar('0');
+		return(1);
 	}
-	else if (num >= 9)
+	while (quot != 0)
 	{
-		while (num > 0)
-		{
-			tab[i] = num % 8;
-			num /= 8;
-			i++;
-		}
+		octaln[q++] = quot % 8;
+		quot = quot / 8;
 	}
-	while (i--)
+	for (w = q - 1; w > 0; w--)
 	{
-		putchar(tab[i] + '0');
-		a++;
+		_putchar((octaln[w]) + '0');
 	}
-	return (a);
+	return(q - 1);
 }
