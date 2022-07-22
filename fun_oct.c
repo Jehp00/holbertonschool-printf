@@ -8,14 +8,13 @@
  */
 int print_o(va_list o)
 {
-	long int n = va_arg(o, long int), q = 1, w;
-	long quot;
+	long int n = va_arg((o), long int), q = 1, w;
+	long int quot;
 	int octaln[100];
 
 	quot = n;
 	if (quot == 0)
 	{
-		_putchar('0');
 		_putchar('0');
 		return(2);
 	}
@@ -26,7 +25,7 @@ int print_o(va_list o)
 	}
 	for (w = q - 1; w > 0; w--)
 	{
-		_putchar(octaln[w] + '0');
+		_putchar((octaln[w]) + '0');
 	}
 	return(q - 1);
 }
