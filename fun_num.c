@@ -12,6 +12,7 @@ int print_i(va_list i)
 	int n = va_arg(i, int);
 	int count = 0;
 	double f = 1;
+
 	if (n == 0)
 	{
 		_putchar('0');
@@ -28,7 +29,7 @@ int print_i(va_list i)
 		else
 			natu = n;
 		while (f <= natu)
-			f = f * 10;		
+			f = f * 10;
 		deci = f / 10;
 		while (deci >= 1)
 		{

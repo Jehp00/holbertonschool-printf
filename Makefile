@@ -1,4 +1,4 @@
-NAME := fun.c _printf.c fun_num.c
+NAME := fun.c _printf.c fun_num.c notation_b.c fun_oct.c:
 CC := gcc
 DEBUGGER := gdb
 LEAK_CHECK:= valgrind
