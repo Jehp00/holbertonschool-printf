@@ -8,11 +8,17 @@
  */
 int print_o(va_list o)
 {
-	long n = va_arg(o, long), q = 1, w;
+	long int n = va_arg(o, long int), q = 1, w;
 	long quot;
 	int octaln[100];
 
 	quot = n;
+	if (quot = 0)
+	{
+		_putchar('0');
+		_putchar('0');
+		return(2);
+	}
 	while (quot != 0)
 	{
 		octaln[q++] = quot % 8;
