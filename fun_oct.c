@@ -9,10 +9,10 @@
 int print_o(va_list o)
 {
 
-	unsigned int num, a = 0, i = 0;
-	int tab[100];
+	long int num, a = 0, i = 0;
+	long int tab[100];
 
-	num = va_arg(o, int);
+	num = va_arg(o, long int);
 	if (num < 9)
 	{
 		putchar(num + '0');
