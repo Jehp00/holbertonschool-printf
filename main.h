@@ -13,6 +13,7 @@ int print_s(va_list s);
 int print_i(va_list i);
 int print_b(va_list b);
 int print_o(va_list o);
+int print_u(va_list u);
 int (*check_specifiers(const char *format))(va_list);
 
 /*Structures*/
