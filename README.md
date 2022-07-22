@@ -50,6 +50,11 @@ ________________________________________________________________________________
 * man_3_printf:
 * fun.c:
 * fun_num.c:
+* fun_hex.c:
+* fun_not.c: 
+* fun_X.c:
+* fun_write.c:
+* notation_b.c: 
 * Makefile:
 _____________________________________________________________________________________
 
@@ -65,13 +70,12 @@ ________________________________________________________________________________
 
 #Advanced Tasks
 ____________________________________________________________________________________
-
-
-
-
-
+* Handle the following custom conversion specifiers b
+* Handle the following conversion specifiers u, o, x, X
+* Use a local buffer of 1024 chars in order to call write as little as possible.
+* Handle the following custom conversion specifier S
 ____________________________________________________________________________________
 
 ##Authors
-* Juan Esteban Hernandez || 5194
-* Daniel Alejandro Garcia || 5199
+*Juan Esteban Hernandez || 5194
+*Daniel Alejandro Garcia || 5199

@@ -2,7 +2,7 @@
 
 /**
  * print_X - prints integers
- * @x: int for print lenght
+ * @X: int for print lenght
  *
  * Return: Number of ints printed
  */
