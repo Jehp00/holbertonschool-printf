@@ -16,7 +16,7 @@ int print_o(va_list o)
 	if (quot == 0)
 	{
 		_putchar('0');
-		return(1);
+		return(2);
 	}
 	while (quot != 0)
 	{

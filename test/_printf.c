@@ -14,6 +14,9 @@ int (*check_specifiers(const char *format))(va_list)
 	print_t ar[] = {
 	{"c", print_c},
 	{"s", print_s},
+	{"i", print_i},
+	{"d", print_i},
+	{"o", print_o},
 	{NULL, NULL}
 	};
 
