@@ -1,0 +1,44 @@
+.TH _printf 1 2022-07-21
+
+.SH NAME
+_printf \- format and print data
+
+.SH SYPNOPSIS
+.B _printf
+\fBFORMAT\fR
+[\fBARGUMENT\fR]
+\fB\.\.\.\fR
+
+.SH DESCRIPTION
+.B _printf
+It is a function that produces output according to a format. The format string is composed of zero or more directives.
+
+.SH FORMAT
+controls the output as in C printf. Interpreted sequences are:
+.TP
+.B %%
+a single %
+
+.SH CONVERSION SPECIFIERS
+.B  A character that specifies the type of conversion to be applied.  The conversion specifiers and their meanings are:
+.TP
+.B \-d
+The  int  argument  is  converted to signed decimal notation(base10).  The precision, if any, gives the minimum number of digits that must appear
+
+.TP
+.B \-i
+The  int  argument  is  converted to signed decimal notation.  The precision, if any, gives the minimum number of digits that must appear
+
+.TP
+.B \-s
+a pointer to an array of character  type  (pointer  to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\0');
+
+.TP
+.B \-c
+a pointer to an array of character  type  (pointer  to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\0');
+
+.SH AUTHOR
+alejandrodgz <alejandro.3np@outlook.com>, Jehp00 <idonotknowhisemail@yahoo.fr>
+
+.SH CONTRIBUTOR
+All the content that we used to go trough the proyect was provided by holbertonschool and websites as github and  overstackflow.com
