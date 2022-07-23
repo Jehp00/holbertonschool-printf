@@ -18,7 +18,7 @@ int print_S(va_list S)
                 po = "(null)";
         for (j = 0; po[j] != '\0'; j++)
         {
-		if ((po[j] > 0 && po[j] < 32) || (po[j] >= 127))
+		if ((po[j] < 32))
 		{
 			_putchar(92);
 			_putchar(120);
@@ -32,7 +32,7 @@ int print_S(va_list S)
 				_putchar('0');
 				_putchar(55 + po[j]);
 			}
-			else
+			else if (po[j] > 16)
 			{
 				_putchar((po[j] / 16) + '0');
 				if ((po[j] % 16) > 9)
