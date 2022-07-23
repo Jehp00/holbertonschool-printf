@@ -35,9 +35,23 @@ int print_S(va_list S)
 				_putchar(55 + po[j]);
 				k += 1;
 			}
-			else if (po[j] > 16)
+			else if (po[j] > 16 && po[j] < 100)
 			{
 				_putchar((po[j] / 16) + '0');
+				if ((po[j] % 16) > 9)
+				{
+					_putchar((po[j] % 16) + 'A');
+					k += 1;
+				}
+				else
+				{
+					_putchar((po[j] % 16) + '0');
+					k += 1;
+				}
+			}
+			else if (po[j]=> 100)
+			{
+				_putchar(((po[j] - 100) / 16) + '0');
 				if ((po[j] % 16) > 9)
 				{
 					_putchar((po[j] % 16) + 'A');
