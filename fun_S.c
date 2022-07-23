@@ -22,7 +22,7 @@ int print_S(va_list S)
 		{
 			_putchar(92);
 			_putchar(120);
-			k += 1;
+			k += 2;
 			if (po[j] <= 9)
 			{
 				_putchar('0');
