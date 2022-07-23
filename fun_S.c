@@ -49,7 +49,7 @@ int print_S(va_list S)
 					k += 1;
 				}
 			}
-			else if (po[j]=> 100)
+			else if (po[j] >= 100)
 			{
 				_putchar(((po[j] - 100) / 16) + '0');
 				if ((po[j] % 16) > 9)
