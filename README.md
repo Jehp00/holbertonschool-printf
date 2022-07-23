@@ -44,18 +44,19 @@ Character
 #File Descriptions
 ____________________________________________________________________________________
 
-* _printf:
-* _putchar:
-* _main.h:
-* man_3_printf:
-* fun.c:
-* fun_num.c:
-* fun_hex.c:
-* fun_not.c: 
-* fun_X.c:
-* fun_write.c:
-* notation_b.c: 
-* Makefile:
+* _printf: main function to print
+* _putchar: function to use print with characters
+* _main.h: header
+* man_3_printf: man to understand the function
+* fun.c: function of specifiers char and str
+* fun_num.c: function to print int
+* fun_hex.c: function to print integers 
+* fun_not.c: function to print notation decimal and octal
+* fun_X.c: function to print hexadecimal or integers
+* fun_write.c: buffers to function write
+* notation_b.c: function to print binary notation from unsigned int
+* fun_S: function to print string format
+* Makefile: compiler style
 _____________________________________________________________________________________
 
 #Mandatory Tasks
