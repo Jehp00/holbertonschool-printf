@@ -10,13 +10,13 @@
 
 int print_S(va_list S)
 {
-        unsigned int j;
+        unsigned int j, k;
         char *po;
 
         po = va_arg(S, char *);
         if (po == NULL)
                 po = "(null)";
-        for (j = 0; po[j] != '\0'; j++)
+        for (j = 0, k = 0; po[j] != '\0'; j++, k++)
         {
 		if ((po[j] < 32))
 		{
@@ -44,5 +44,5 @@ int print_S(va_list S)
 		else
                 _putchar(po[j]);
         }
-        return (j);
+        return (k);
 }
