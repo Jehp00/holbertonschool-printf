@@ -8,8 +8,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int _buffer(char ch);
-int _print(char *string);
+int _write(char ch);
 int print_c(va_list c);
 int print_s(va_list s);
 int print_i(va_list i);
@@ -19,7 +18,6 @@ int print_u(va_list u);
 int print_x(va_list x);
 int print_X(va_list X);
 int print_S(va_list S);
-
 int (*check_specifiers(const char *format))(va_list);
 
 /*Structures*/
