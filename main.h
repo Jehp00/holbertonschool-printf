@@ -4,11 +4,14 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/*buffer*/
+
+#define BUFFER_SIZE 1024
+
 /*Prototypes*/
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int _write(char ch);
 int print_c(va_list c);
 int print_s(va_list s);
 int print_i(va_list i);

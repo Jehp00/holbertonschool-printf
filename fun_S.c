@@ -10,36 +10,28 @@
 
 int print_S(va_list S)
 {
-	unsigned int j, k;
-	char *po;
+	unsigned int a;
+	int quot = 0;
+	char *string = va_arg(S, char *);
 
-	po = va_arg(S, char *);
-	if (po == NULL)
-		po = "(null)";
-	for (j = 0, k = 0; po[j] != '\0'; j++, k++)
+	if (string == NULL)
 	{
-		if ((po[j] < 32 && po[j] > 0) || (po[j] >= 127))
+		string = "(null)";
+	}
+	for (a = 0; string[a]; a++)
+	{
+		if (string[a] < 32 || string[a] >= 127)
 		{
-			_putchar(92);
-			_putchar(120);
-			k += 2;
-			if (po[j] <= 9)
-			{
-				_putchar('0');
-				_putchar('0' + po[j]);
-				k += 1;
-			}
-			if (po[j] < 16 && po[j] > 9)
-			{
-				_putchar('0');
-				_putchar(55 + po[j]);
-				k += 1;
-			}
+			_putchar('\\');
+			_putchar('x');
+			quot += 2;
+			quot += print_X(string[a]);
 		}
 		else
 		{
-			_putchar(po[j]);
+			_putchar(string[a]);
+			quot++;
 		}
 	}
-	return (k);
+	return (quot);
 }
