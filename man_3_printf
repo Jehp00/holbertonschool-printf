@@ -37,8 +37,17 @@ a pointer to an array of character  type  (pointer  to a string).  Characters fr
 .B \-c
 a pointer to an array of character  type  (pointer  to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\0');
 
+.TP
+.B \-o, u, x, X
+The unsigned int argument is converted to unsigned octal (o), unsigned decimal (u), or  unsigned  hexadecimal (x and X) notation.  The letters abcdef are used for x conversions; the letters ABCDEF are used for X conversions.  The precision, if any, gives the minimum number of digits that must appear; if  the converted  value  requires fewer digits, it is padded on the left with zeros.  The default precision is 1.  When 0 is printed with an explicit precision 0, the output is empty.
+
+.TP
+.B \-s
+a pointer to an array of character  type  (pointer  to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\0'), Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal;
+
 .SH AUTHOR
 alejandrodgz <alejandro.3np@outlook.com>, Jehp00 <idonotknowhisemail@yahoo.fr>
 
 .SH CONTRIBUTOR
 All the content that we used to go trough the proyect was provided by holbertonschool and websites as github and  overstackflow.com
+

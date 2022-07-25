@@ -44,13 +44,19 @@ Character
 #File Descriptions
 ____________________________________________________________________________________
 
-* _printf:
-* _putchar:
-* _main.h:
-* man_3_printf:
-* fun.c:
-* fun_num.c:
-* Makefile:
+* _printf: main function to print
+* _putchar: function to use print with characters
+* _main.h: header
+* man_3_printf: man to understand the function
+* fun.c: function of specifiers char and str
+* fun_num.c: function to print int
+* fun_hex.c: function to print integers 
+* fun_not.c: function to print notation decimal and octal
+* fun_X.c: function to print hexadecimal or integers
+* fun_write.c: buffers to function write
+* notation_b.c: function to print binary notation from unsigned int
+* fun_S: function to print string format
+* Makefile: compiler style
 _____________________________________________________________________________________
 
 #Mandatory Tasks
@@ -65,13 +71,12 @@ ________________________________________________________________________________
 
 #Advanced Tasks
 ____________________________________________________________________________________
-
-
-
-
-
+* Handle the following custom conversion specifiers b
+* Handle the following conversion specifiers u, o, x, X
+* Use a local buffer of 1024 chars in order to call write as little as possible.
+* Handle the following custom conversion specifier S
 ____________________________________________________________________________________
 
 ##Authors
-* Juan Esteban Hernandez || 5194
-* Daniel Alejandro Garcia || 5199
+*Juan Esteban Hernandez || 5194
+*Daniel Alejandro Garcia || 5199

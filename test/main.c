@@ -15,9 +15,12 @@ int main(void)
     void *addr;
     long int l = UINT_MAX;
 
-    _printf("%S\n", "Best\nSchool");
-    printf("%S\n", "Best\nSchool");
-    printf("%S\n", "Best\tSchool");
+    len =_printf("%S\n", "Best\nSchool");
+    printf("Length:[%d]\n", len);
+    len =_printf("%S", "\n");
+    printf("Length:[%d]\n", len);
+    len =_printf("%S", "\x01\x02\x03\x04\x05\x06\x07");
+    printf("Length:[%d]\n", len);
     printf("%o\n", l);
     printf("%o\n", l);
     l += 1024;

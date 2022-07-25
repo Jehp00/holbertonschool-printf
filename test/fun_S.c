@@ -10,39 +10,62 @@
 
 int print_S(va_list S)
 {
-        unsigned int j;
+        unsigned int j, k;
         char *po;
 
         po = va_arg(S, char *);
         if (po == NULL)
                 po = "(null)";
-        for (j = 0; po[j] != '\0'; j++)
+        for (j = 0, k = 0; po[j] != '\0'; j++, k++)
         {
-		if ((po[j] > 0 && po[j] < 32) || (po[j] >= 127))
+		if ((po[j] < 32 && po[j] > 0) || (po[j] >= 127))
 		{
 			_putchar(92);
 			_putchar(120);
+			k += 2;
 			if (po[j] <= 9)
 			{
 				_putchar('0');
 				_putchar('0'+ po[j]);
+				k += 1;
 			}
 			if (po[j] < 16 && po[j] > 9)
 			{
 				_putchar('0');
 				_putchar(55 + po[j]);
+				k += 1;
 			}
-			else
+			else if (po[j] > 16 && po[j] < 100)
 			{
 				_putchar((po[j] / 16) + '0');
 				if ((po[j] % 16) > 9)
+				{
 					_putchar((po[j] % 16) + 'A');
+					k += 1;
+				}
 				else
+				{
 					_putchar((po[j] % 16) + '0');
+					k += 1;
+				}
+			}
+			else if (po[j] >= 100)
+			{
+				_putchar(((po[j] - 100) / 16) + '0');
+				if ((po[j] % 16) > 9)
+				{
+					_putchar((po[j] % 16) + 'A');
+					k += 1;
+				}
+				else
+				{
+					_putchar((po[j] % 16) + '0');
+					k += 1;
+				}
 			}
 		}
 		else
                 _putchar(po[j]);
         }
-        return (j);
+        return (k);
 }

@@ -3,6 +3,30 @@
 #include <stdio.h>
 
 /**
+ * hex_print - prints a char's ascii value in uppercase hex
+ * @c: char to print
+ *
+ * Return: number of chars printed (always 2)
+ */
+int hex_print(char c)
+{
+	int count;
+	char diff = 'A' - ':';
+	char d[2];
+
+	d[0] = c / 16;
+	d[1] = c % 16;
+	for (count = 0; count < 2; count++)
+	{
+		if (d[count] >= 10)
+			_putchar('0' + diff + d[count]);
+		else
+			_putchar('0' + d[count]);
+	}
+	return (count);
+}
+
+/**
  * print_S - prints string format
  * @S: string
  * Return: return value to counter
@@ -10,39 +34,28 @@
 
 int print_S(va_list S)
 {
-        unsigned int j;
-        char *po;
+	unsigned int a;
+	int quot = 0;
+	char *string = va_arg(S, char *);
 
-        po = va_arg(S, char *);
-        if (po == NULL)
-                po = "(null)";
-        for (j = 0; po[j] != '\0'; j++)
-        {
-		if ((po[j] < 32))
+	if (string == NULL)
+	{
+		string = "(null)";
+	}
+	for (a = 0; string[a]; a++)
+	{
+		if (string[a] < 32 || string[a] >= 127)
 		{
-			_putchar(92);
-			_putchar(120);
-			if (po[j] <= 9)
-			{
-				_putchar('0');
-				_putchar('0'+ po[j]);
-			}
-			if (po[j] < 16 && po[j] > 9)
-			{
-				_putchar('0');
-				_putchar(55 + po[j]);
-			}
-			else if (po[j] > 16)
-			{
-				_putchar((po[j] / 16) + '0');
-				if ((po[j] % 16) > 9)
-					_putchar((po[j] % 16) + 'A');
-				else
-					_putchar((po[j] % 16) + '0');
-			}
+			_putchar('\\');
+			_putchar('x');
+			quot += 2;
+			quot += hex_print(string[a]);
 		}
 		else
-                _putchar(po[j]);
-        }
-        return (j);
+		{
+			_putchar(string[a]);
+			quot++;
+		}
+	}
+	return (quot);
 }
