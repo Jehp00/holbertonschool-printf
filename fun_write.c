@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <unistd.h>
 
 /**
@@ -16,7 +16,7 @@ int _write(char ch)
 
 	if (ch == -1 || a >= 1024)
 	{
-		write(1, &buf, i);
+		write(1, &buf, 1);
 		a = 0;
 	}
 	if (ch != -1)
